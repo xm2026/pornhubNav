@@ -20,8 +20,8 @@ A minimalist navigation website with UI design inspired by Pornhub's black and o
 
 ## Online Preview 🌐
 
-- GitHub Pages: `https://your-username.github.io/webnav-hub`
-- Cloudflare Pages: `https://your-project.pages.dev`
+- GitHub Pages: `https://g.186404.xyz/pornhubNav`
+- Cloudflare Pages: `https://pornhubnav.pages.dev`
 
 ## Deployment Guide 🚀
 
