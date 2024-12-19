@@ -20,8 +20,8 @@
 
 ## 在线预览 🌐
 
-- GitHub Pages: `https://你的用户名.github.io/webnav-hub`
-- Cloudflare Pages: `https://你的项目名.pages.dev`
+- GitHub Pages: `https://g.186404.xyz/pornhubNav/`
+- Cloudflare Pages: `https://pornhubnav.pages.dev/`
 
 ## 部署指南 🚀
 
