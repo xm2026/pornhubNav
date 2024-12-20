@@ -44,6 +44,7 @@
       .logo span {
         font-size: 18px;
         font-weight: bold;
+        color: var(--accent-color);
       }
       .menu-toggle {
         background: none;
@@ -62,6 +63,7 @@
         left: 0;
         overflow-y: auto;
         transition: transform 0.3s ease-in-out;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
       }
       nav a {
         display: flex;
@@ -115,6 +117,7 @@
         align-items: center;
         justify-content: center;
         min-height: 120px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
       .link-card:hover {
         background-color: var(--hover-bg);
@@ -127,6 +130,11 @@
       @media (hover: none) {
         .link-card:hover {
           transform: none;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .link-card:active {
+          transform: scale(0.98);
+          background-color: var(--hover-bg);
         }
       }
       .link-card i {
@@ -170,19 +178,22 @@
           grid-template-columns: repeat(4, 1fr);
           gap: 10px;
         }
-        .link-section {
-          grid-template-columns: repeat(4, 1fr);
-          gap: 10px;
-        }
         .link-card {
           padding: 10px;
+          height: 70px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
         }
         .link-card i {
           font-size: 1.2rem;
+          margin-bottom: 6px;
         }
         .link-card h3 {
           font-size: 0.8rem;
-          margin-top: 5px;
+          margin: 0;
+          text-align: center;
         }
       }
       @media (max-width: 480px) {
@@ -192,15 +203,15 @@
         }
         .link-card {
           padding: 8px;
-          min-height: 90px;
+          height: 60px;
         }
         .link-card i {
           font-size: 1rem;
-          margin-bottom: 6px;
+          margin-bottom: 4px;
         }
         .link-card h3 {
           font-size: 0.7rem;
-          margin-top: 4px;
+          margin: 0;
         }
       }
     </style>
@@ -636,7 +647,7 @@
         </a>
         <a class="link-card" href="https://22.do/">
           <i class="fas fa-envelope-open"></i>
-          <h3>GMail��时邮箱</h3>
+          <h3>GMail临时邮箱</h3>
         </a>
         <a class="link-card" href="https://www.agogmail.com/">
           <i class="fas fa-envelope-square"></i>
