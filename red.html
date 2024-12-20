@@ -163,13 +163,9 @@
         }
         nav {
           transform: translateX(-100%);
-          width: 240px;
         }
         nav.active {
           transform: translateX(0);
-        }
-        nav a span {
-          display: inline;
         }
         main {
           margin-left: 0;
@@ -181,6 +177,7 @@
         .link-card {
           padding: 10px;
           height: 70px;
+          min-height: unset;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -188,12 +185,14 @@
         }
         .link-card i {
           font-size: 1.2rem;
-          margin-bottom: 6px;
+          margin-bottom: 5px;
+          margin-top: 0;
         }
         .link-card h3 {
           font-size: 0.8rem;
-          margin: 0;
+          margin: 0 auto;
           text-align: center;
+          width: 100%;
         }
       }
       @media (max-width: 480px) {
@@ -204,6 +203,7 @@
         .link-card {
           padding: 8px;
           height: 60px;
+          min-height: unset;
         }
         .link-card i {
           font-size: 1rem;
@@ -212,6 +212,7 @@
         .link-card h3 {
           font-size: 0.7rem;
           margin: 0;
+          line-height: 1.2;
         }
       }
     </style>
@@ -635,7 +636,7 @@
         </a>
       </section>
 
-      <h2 class="category-title" id="email">电子邮箱</h2>
+      <h2 class="category-title" id="email">电子邮��</h2>
       <section class="link-grid">
         <a class="link-card" href="https://mail.google.com">
           <i class="fas fa-envelope"></i>
