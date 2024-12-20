@@ -1,8 +1,10 @@
 # WebNav Hub 🚀 | [English](README_EN.md)
 
 一个简约的网址导航网站，UI 设计灵感来自 Pornhub 的黑橙配色方案。
-![](https://cdn.jsdelivr.net/gh/bbylw/PicGo@master/20241220015640531.png)
-![](https://cdn.jsdelivr.net/gh/bbylw/PicGo@master/20241220085619295.png)
+![dark-theme](https://cdn.jsdelivr.net/gh/bbylw/PicGo@master/20241220015640531.png)
+
+![preview](https://cdn.jsdelivr.net/gh/bbylw/PicGo@master/20241220085619295.png)
+
 ## 特点 ✨
 
 - 🎨 经典的黑橙配色方案

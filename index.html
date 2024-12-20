@@ -59,6 +59,7 @@
         left: 0;
         overflow-y: auto;
         transition: transform 0.3s ease-in-out;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
       }
       nav a {
         display: flex;
@@ -86,10 +87,20 @@
       .category-title {
         font-size: 18px;
         font-weight: 500;
-        margin: 24px 0 16px;
+        margin: 32px 0 20px;
         padding-bottom: 8px;
         border-bottom: 1px solid var(--accent-color);
         color: var(--accent-color);
+        position: relative;
+      }
+      .category-title::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background-color: var(--accent-color);
       }
       .link-grid {
         display: grid;
@@ -98,11 +109,14 @@
         margin-bottom: 32px;
       }
       .link-card {
+        will-change: transform;
+        transform: translateY(0);
+        transition: transform 0.3s ease, background-color 0.3s ease,
+          box-shadow 0.3s ease;
         background-color: var(--secondary-bg);
         border-radius: 8px;
         padding: 16px;
         text-align: center;
-        transition: all 0.3s ease;
         cursor: pointer;
         text-decoration: none;
         color: var(--text-color);
@@ -111,11 +125,26 @@
         align-items: center;
         justify-content: center;
         min-height: 120px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
       .link-card:hover {
         background-color: var(--hover-bg);
         transform: translateY(-3px);
-        border: 1px solid var(--accent-color);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .link-card:focus {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 2px;
+      }
+      @media (hover: none) {
+        .link-card:hover {
+          transform: none;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .link-card:active {
+          transform: scale(0.98);
+          background-color: var(--hover-bg);
+        }
       }
       .link-card i {
         font-size: 32px;
@@ -155,27 +184,43 @@
           margin-left: 0;
         }
         .link-grid {
-          grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+        }
+        .link-card {
+          padding: 10px;
+        }
+        .link-card i {
+          font-size: 1.2rem;
+        }
+        .link-card h3 {
+          font-size: 0.8rem;
+          margin-top: 5px;
         }
       }
       @media (max-width: 480px) {
         .link-grid {
-          grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+          grid-template-columns: repeat(4, 1fr);
+          gap: 8px;
         }
         .link-card {
-          min-height: 100px;
+          padding: 8px;
+          min-height: 90px;
         }
         .link-card i {
-          font-size: 24px;
+          font-size: 1rem;
+          margin-bottom: 6px;
         }
         .link-card h3 {
-          font-size: 12px;
+          font-size: 0.7rem;
+          margin-top: 4px;
         }
       }
       nav ul {
         list-style: none;
         padding: 0;
         margin: 0;
+        margin-top: 8px;
       }
 
       nav li {
@@ -184,16 +229,18 @@
       }
 
       nav li a {
-        padding: 12px 24px;
-        display: block;
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
         color: var(--text-color);
         text-decoration: none;
-        transition: background-color 0.3s;
+        transition: all 0.3s ease;
+        border-left: 3px solid transparent;
       }
 
       nav li a:hover {
         background-color: var(--hover-bg);
-        color: var(--accent-color);
+        border-left: 3px solid var(--accent-color);
       }
     </style>
     <link
